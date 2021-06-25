@@ -132,3 +132,14 @@ document.write("(a >> b) => ");
 result = (a >> b);
 document.write(result);
 document.write(linebreak);
+
+/* ternery operator */
+result = (typeof b == "string" ? "B is String" : "B is Numeric");
+document.write("Result => ");
+document.write(result);
+document.write(linebreak);
+
+result = (typeof a == "number" ? "A is number" : "A is not a number");
+document.write("Result => ");
+document.write(result);
+document.write(linebreak);
