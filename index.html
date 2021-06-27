@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <p></p>
+    <div id="stopwatch">
+        00:00:00:00
+    </div>
+    <ul id="buttons">
+        <li><button onclick="startTimer()">Start</button></li>
+        <li><button onclick="stopTimer()">Stop</button></li>
+
+        <li><button onclick="resetTimer()">Reset</button></li>
+    </ul>
     <script src="./js/app.js"></script>
 </body>
 </html>

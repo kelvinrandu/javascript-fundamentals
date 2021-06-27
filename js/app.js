@@ -1,145 +1,56 @@
-console.log('global vs block scope')
+const timer = document.getElementById('stopwatch');
 
-let greeting ='hello from global ';
-const greet=()=>{
-    let greeting='hello from block';
+var hr = 0;
+var min = 0;
+var sec = 0;
+var stoptime = true;
 
- return greeting
+function startTimer() {
+  if (stoptime == true) {
+        stoptime = false;
+        timerCycle();
+    }
 }
-console.log(greet())
-console.log(greeting)
+function stopTimer() {
+  if (stoptime == false) {
+    stoptime = true;
+  }
+}
 
+function timerCycle() {
+    if (stoptime == false) {
+    sec = parseInt(sec);
+    min = parseInt(min);
+    hr = parseInt(hr);
 
-/*  operators */
-document.write('operators')
-let a= 30;
-let b= 30;
+    sec = sec + 1;
 
-b--;
-a++;
+    if (sec == 60) {
+      min = min + 1;
+      sec = 0;
+    }
+    if (min == 60) {
+      hr = hr + 1;
+      min = 0;
+      sec = 0;
+    }
 
-var linebreak = "</br>";
-document.write(linebreak)
-document.write(a)
-document.write(linebreak)
-document.write(b)
- 
-//addition
-document.write(linebreak)
-let result = a+b;
-document.write(result)
+    if (sec < 10 || sec == 0) {
+      sec = '0' + sec;
+    }
+    if (min < 10 || min == 0) {
+      min = '0' + min;
+    }
+    if (hr < 10 || hr == 0) {
+      hr = '0' + hr;
+    }
 
-//subtraction
-document.write(linebreak)
-result = a-b;
-document.write(result)
+    timer.innerHTML = hr + ':' + min + ':' + sec;
 
-//multiplication
-document.write(linebreak)
-result = a*b;
-document.write(result)
+    setTimeout("timerCycle()", 1000);
+  }
+}
 
-//division
-document.write(linebreak)
-result = a/b;
-document.write(result)
-
-//modulus
-document.write(linebreak)
-result = a%b;
-document.write(result)
-document.write(linebreak);
-
-/*  comparison operators */
- 
-document.write("comparison operators ");
-      
-document.write("(a == b) => ");
-result = (a == b);
-document.write(result);
-document.write(linebreak);
-         
-document.write("(a < b) => ");
-result = (a < b);
-document.write(result);
-document.write(linebreak);
-         
-document.write("(a > b) => ");
-result = (a > b);
-document.write(result);
-document.write(linebreak);
-         
-document.write("(a != b) => ");
-result = (a != b);
-document.write(result);
-document.write(linebreak);
-         
-document.write("(a >= b) => ");
-result = (a >= b);
-document.write(result);
-document.write(linebreak);
-document.write("(a <= b) => ");
-result = (a <= b);
-document.write(result);
-document.write(linebreak);
-
-/*  logical operators */
-document.write("logical operators");
-document.write(linebreak);
-document.write("(a && b) => ");
-result = (a && b);
-document.write(result);
-document.write(linebreak);
-
-document.write("(a || b) => ");
-result = (a || b);
-document.write(result);
-document.write(linebreak);
-
-document.write("!(a && b) => ");
-result = (!(a && b));
-document.write(result);
-document.write(linebreak); 
-
-
-/* bitwise operator */
-document.write("bitwise operator");
-
-document.write("(a & b) => ");            
-result = (a & b);           
-document.write(result);
-document.write(linebreak);
-document.write("(a | b) => ");
-result = (a | b);
-document.write(result);
-document.write(linebreak);
-document.write("(a ^ b) => ");
-result = (a ^ b);
-document.write(result);
-document.write(linebreak);
-         
-document.write("(~b) => ");
-result = (~b);
-document.write(result);
-document.write(linebreak);
-         
-document.write("(a << b) => ");
-result = (a << b);
-document.write(result);
-document.write(linebreak);
-         
-document.write("(a >> b) => ");
-result = (a >> b);
-document.write(result);
-document.write(linebreak);
-
-/* ternery operator */
-result = (typeof b == "string" ? "B is String" : "B is Numeric");
-document.write("Result => ");
-document.write(result);
-document.write(linebreak);
-
-result = (typeof a == "number" ? "A is number" : "A is not a number");
-document.write("Result => ");
-document.write(result);
-document.write(linebreak);
+function resetTimer() {
+    timer.innerHTML = '00:00:00';
+}
