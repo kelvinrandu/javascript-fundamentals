@@ -4,7 +4,7 @@
 - If-else
 - Switch-case
 - while loop
-- For looop
+- For loop
 - For in
 - Loop controls
 
