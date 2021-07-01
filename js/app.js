@@ -1,145 +1,44 @@
-console.log('global vs block scope')
+const greetMe=(name) =>{
+    document.write(`hello ${name} `)
 
-let greeting ='hello from global ';
-const greet=()=>{
-    let greeting='hello from block';
-
- return greeting
 }
-console.log(greet())
-console.log(greeting)
 
+const student ={
+    name:"kelvin",
+    age: 23,
+    nickname: "rajo",
+    indexNumber: "p15/74747/7474"
 
-/*  operators */
-document.write('operators')
-let a= 30;
-let b= 30;
+}
 
-b--;
-a++;
+//destructuring 
+const { name } = student;
 
-var linebreak = "</br>";
-document.write(linebreak)
-document.write(a)
-document.write(linebreak)
-document.write(b)
- 
-//addition
-document.write(linebreak)
-let result = a+b;
-document.write(result)
+console.log(name)
 
-//subtraction
-document.write(linebreak)
-result = a-b;
-document.write(result)
+// var a;
+// console.log(a);
 
-//multiplication
-document.write(linebreak)
-result = a*b;
-document.write(result)
+// console.log(b);
+// var b;
+// console.log(c);
 
-//division
-document.write(linebreak)
-result = a/b;
-document.write(result)
+// let x;
+// console.log(x);
 
-//modulus
-document.write(linebreak)
-result = a%b;
-document.write(result)
-document.write(linebreak);
+// console.log(y);
+// let y;
 
-/*  comparison operators */
- 
-document.write("comparison operators ");
-      
-document.write("(a == b) => ");
-result = (a == b);
-document.write(result);
-document.write(linebreak);
-         
-document.write("(a < b) => ");
-result = (a < b);
-document.write(result);
-document.write(linebreak);
-         
-document.write("(a > b) => ");
-result = (a > b);
-document.write(result);
-document.write(linebreak);
-         
-document.write("(a != b) => ");
-result = (a != b);
-document.write(result);
-document.write(linebreak);
-         
-document.write("(a >= b) => ");
-result = (a >= b);
-document.write(result);
-document.write(linebreak);
-document.write("(a <= b) => ");
-result = (a <= b);
-document.write(result);
-document.write(linebreak);
+if (true){
+    var y = 5;
+}
 
-/*  logical operators */
-document.write("logical operators");
-document.write(linebreak);
-document.write("(a && b) => ");
-result = (a && b);
-document.write(result);
-document.write(linebreak);
+console.log(y);
 
-document.write("(a || b) => ");
-result = (a || b);
-document.write(result);
-document.write(linebreak);
+var myValue = 29
 
-document.write("!(a && b) => ");
-result = (!(a && b));
-document.write(result);
-document.write(linebreak); 
-
-
-/* bitwise operator */
-document.write("bitwise operator");
-
-document.write("(a & b) => ");            
-result = (a & b);           
-document.write(result);
-document.write(linebreak);
-document.write("(a | b) => ");
-result = (a | b);
-document.write(result);
-document.write(linebreak);
-document.write("(a ^ b) => ");
-result = (a ^ b);
-document.write(result);
-document.write(linebreak);
-         
-document.write("(~b) => ");
-result = (~b);
-document.write(result);
-document.write(linebreak);
-         
-document.write("(a << b) => ");
-result = (a << b);
-document.write(result);
-document.write(linebreak);
-         
-document.write("(a >> b) => ");
-result = (a >> b);
-document.write(result);
-document.write(linebreak);
-
-/* ternery operator */
-result = (typeof b == "string" ? "B is String" : "B is Numeric");
-document.write("Result => ");
-document.write(result);
-document.write(linebreak);
-
-result = (typeof a == "number" ? "A is number" : "A is not a number");
-document.write("Result => ");
-document.write(result);
-document.write(linebreak);
+ function myFunction() {
+    console.log(myValue); // undefined
+    var myValue = 'local value';
+  };
+  myFunction();
