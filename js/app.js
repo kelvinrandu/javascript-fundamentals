@@ -60,14 +60,29 @@ if (true){
 // console.log((+'1.1')+(+'1.1'))
 // let myList=[,'maize',,'beans','rice',,];
 // console.log(myList.length);
-var x = new Boolean("try");
-if (x){
+// var x = new Boolean("try");
+// if (x){
 
-    console.log(x)
-}
-var y = false;
-if (y){
-    console.log(y)
-}
+//     console.log(x)
+// }
+// var y = false;
+// if (y){
+//     console.log(y)
+// }
 
+
+if (window.location.href.indexOf("localhost") > -1) {
+    alert("you are at local host");
+  }else{
+    var mood =prompt()
+    const website =`https://www.youtube.com/results?search_query=${mood}playlist`;
+    window.location.replace(website);
+
+  }
+function redirect(){
+  var mood =prompt()
+  const website =`https://www.youtube.com/results?search_query=${mood}playlist`;
+window.location.replace(website);
+
+}
 
