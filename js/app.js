@@ -33,12 +33,23 @@ if (true){
     var y = 5;
 }
 
-console.log(y);
+// console.log(y);
 
-var myValue = 29
+// var myValue = 29
 
- function myFunction() {
-    console.log(myValue); // undefined
-    var myValue = 'local value';
-  };
-  myFunction();
+//  function myFunction() {
+//     console.log(myValue); // undefined
+//     var myValue = 'local value';
+//   };
+//   myFunction();
+
+// function hoisting
+greetYou();
+function greetYou(){
+    console.log('greeted me')
+}
+
+greetThem();
+const greetThem=()=>{
+    console.log('greetthem')
+}
