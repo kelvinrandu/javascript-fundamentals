@@ -53,8 +53,12 @@ if (true){
 // const greetThem=()=>{
 //     console.log('greetthem')
 // }
-console.log('37' - 7)
-console.log(37+ '7')
+// console.log('37' - 7)
+// console.log(37+ '7')
 
-console.log('1.1' + '1.1')
-console.log((+'1.1')+(+'1.1'))
+// console.log('1.1' + '1.1')
+// console.log((+'1.1')+(+'1.1'))
+let myList=[,'maize',,'beans','rice',,];
+console.log(myList.length);
+
+
