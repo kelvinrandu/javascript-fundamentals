@@ -58,7 +58,16 @@ if (true){
 
 // console.log('1.1' + '1.1')
 // console.log((+'1.1')+(+'1.1'))
-let myList=[,'maize',,'beans','rice',,];
-console.log(myList.length);
+// let myList=[,'maize',,'beans','rice',,];
+// console.log(myList.length);
+var x = new Boolean("try");
+if (x){
+
+    console.log(x)
+}
+var y = false;
+if (y){
+    console.log(y)
+}
 
 
