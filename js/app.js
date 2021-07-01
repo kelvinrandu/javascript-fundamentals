@@ -44,12 +44,17 @@ if (true){
 //   myFunction();
 
 // function hoisting
-greetYou();
-function greetYou(){
-    console.log('greeted me')
-}
+// greetYou();
+// function greetYou(){
+//     console.log('greeted me')
+// }
 
-greetThem();
-const greetThem=()=>{
-    console.log('greetthem')
-}
+// greetThem();
+// const greetThem=()=>{
+//     console.log('greetthem')
+// }
+console.log('37' - 7)
+console.log(37+ '7')
+
+console.log('1.1' + '1.1')
+console.log((+'1.1')+(+'1.1'))
