@@ -1,0 +1,19 @@
+
+button{
+    background-color: lightgreen;
+    padding: 10px;
+    margin-top: 20px ;
+    margin-left: auto ;
+    margin-right: auto;
+    border-radius: 10px;
+    outline: lightgreen;
+    border: none ;
+    color:honeydew;
+
+    
+}
+button:hover{
+    background-color: rgb(34, 33, 31);
+    cursor: grab;
+
+}

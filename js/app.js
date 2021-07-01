@@ -71,18 +71,34 @@ if (true){
 // }
 
 
-if (window.location.href.indexOf("localhost") > -1) {
-    alert("you are at local host");
-  }else{
-    var mood =prompt()
-    const website =`https://www.youtube.com/results?search_query=${mood}playlist`;
-    window.location.replace(website);
+// if (window.location.href.indexOf("localhost") > -1) {
+//     alert("you are at local host");
+//   }else{
+//     var mood =prompt()
+//     const website =`https://www.youtube.com/results?search_query=${mood}playlist`;
+//     window.location.replace(website);
 
-  }
-function redirect(){
-  var mood =prompt()
-  const website =`https://www.youtube.com/results?search_query=${mood}playlist`;
-window.location.replace(website);
+//   }
+// function redirect(){
+//   var mood =prompt()
+//   const website =`https://www.youtube.com/results?search_query=${mood}playlist`;
+// window.location.replace(website);
 
-}
+// }
+//  console.log('1')
+//  console.log(1)
 
+var quote = ' \" hello there\"'
+console.log(quote)
+var poem =
+'Roses are red,\n\
+Violets are blue.\n\
+Sugar is sweet,\n\
+and so is foo.'
+console.log(poem)
+var poem2 =
+`Roses are red,
+Violets are blue.
+Sugar is sweet,
+and so is foo.` 
+console.log(poem2)
