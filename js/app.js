@@ -102,3 +102,23 @@ Violets are blue.
 Sugar is sweet,
 and so is foo.` 
 console.log(poem2)
+
+let fruit = 'pineaple'
+
+switch(fruit){
+
+    case 'banana':
+        console.log('your fuit is banana')
+        break;
+    case 'pineaple':
+        console.log('your fuit is pineapple')
+        break;
+    case 'mango':
+        console.log('your fuit is mango')
+        break;
+    case 'oranges':
+        console.log('your fuit is oranges')
+        break;
+    default:
+        console.log(`sorry we are out of ${fruit}`)
+}
