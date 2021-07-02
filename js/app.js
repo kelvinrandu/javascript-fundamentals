@@ -88,37 +88,72 @@ if (true){
 //  console.log('1')
 //  console.log(1)
 
-var quote = ' \" hello there\"'
-console.log(quote)
-var poem =
-'Roses are red,\n\
-Violets are blue.\n\
-Sugar is sweet,\n\
-and so is foo.'
-console.log(poem)
-var poem2 =
-`Roses are red,
-Violets are blue.
-Sugar is sweet,
-and so is foo.` 
-console.log(poem2)
+// var quote = ' \" hello there\"'
+// console.log(quote)
+// var poem =
+// 'Roses are red,\n\
+// Violets are blue.\n\
+// Sugar is sweet,\n\
+// and so is foo.'
+// console.log(poem)
+// var poem2 =
+// `Roses are red,
+// Violets are blue.
+// Sugar is sweet,
+// and so is foo.` 
+// console.log(poem2)
 
-let fruit = 'pineaple'
+// let fruit = 'pineaple'
 
-switch(fruit){
+// switch(fruit){
 
-    case 'banana':
-        console.log('your fuit is banana')
-        break;
-    case 'pineaple':
-        console.log('your fuit is pineapple')
-        break;
-    case 'mango':
-        console.log('your fuit is mango')
-        break;
-    case 'oranges':
-        console.log('your fuit is oranges')
-        break;
-    default:
-        console.log(`sorry we are out of ${fruit}`)
+//     case 'banana':
+//         console.log('your fuit is banana')
+//         break;
+//     case 'pineaple':
+//         console.log('your fuit is pineapple')
+//         break;
+//     case 'mango':
+//         console.log('your fuit is mango')
+//         break;
+//     case 'oranges':
+//         console.log('your fuit is oranges')
+//         break;
+//     default:
+//         console.log(`sorry we are out of ${fruit}`)
+// }
+
+function getMonthName(){
+    mo = prompt('enter month name');
+    mo = mo -1;
+    let months = ['jan','feb','mar','apr','may','jun','july','aug','sep','oct','nov','dec']
+    if (months[mo]){
+        return months[mo]
+    }else{
+        throw 'error';
+    }
+
+
+
 }
+try { // statements to try
+    monthName = getMonthName(myMonth); // function could throw exception
+  }
+  catch (e) {
+    monthName = 'unknown';
+    logMyErrors(e); // pass exception object to error handler (i.e. your own function)
+  }
+
+  function logMyErrors(e){
+      console.log(e);
+  }
+function getMonthName2(mo){
+    mo = mo -1;
+
+    return 
+    mo;
+
+}
+
+console.log(getMonthName(13));
+console.log(getMonthName2(12));
