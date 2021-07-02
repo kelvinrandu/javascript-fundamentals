@@ -123,37 +123,62 @@ if (true){
 //         console.log(`sorry we are out of ${fruit}`)
 // }
 
-function getMonthName(){
-    mo = prompt('enter month name');
-    mo = mo -1;
-    let months = ['jan','feb','mar','apr','may','jun','july','aug','sep','oct','nov','dec']
-    if (months[mo]){
-        return months[mo]
-    }else{
-        throw 'error';
-    }
+// function getMonthName(){
+//     mo = prompt('enter month name');
+//     mo = mo -1;
+//     let months = ['jan','feb','mar','apr','may','jun','july','aug','sep','oct','nov','dec']
+//     if (months[mo]){
+//         return months[mo]
+//     }else{
+//         throw 'error';
+//     }
 
 
 
-}
-try { // statements to try
-    monthName = getMonthName(myMonth); // function could throw exception
-  }
-  catch (e) {
-    monthName = 'unknown';
-    logMyErrors(e); // pass exception object to error handler (i.e. your own function)
-  }
+// }
+// try { // statements to try
+//     monthName = getMonthName(myMonth); // function could throw exception
+//   }
+//   catch (e) {
+//     monthName = 'unknown';
+//     logMyErrors(e); // pass exception object to error handler (i.e. your own function)
+//   }
 
-  function logMyErrors(e){
-      console.log(e);
-  }
-function getMonthName2(mo){
-    mo = mo -1;
+//   function logMyErrors(e){
+//       console.log(e);
+//   }
+// function getMonthName2(mo){
+//     mo = mo -1;
 
-    return 
-    mo;
+//     return 
+//     mo;
 
-}
+// }
 
-console.log(getMonthName(13));
-console.log(getMonthName2(12));
+// console.log(getMonthName(13));
+// console.log(getMonthName2(12));
+
+// function hello(name){
+//     return `hello ${name}`
+// }
+// console.log(hello('bob','james'));
+// console.log(hello('james'));
+// console.log(hello('amos'));
+
+    window.onresize = function(){
+        var size = window.innerWidth
+        if  (size <= 400){
+            console.log('mobile');
+            window.document.getElementById('main').innerHTML= 'mobile';
+        }else if (size <= 700){
+            console.log('tab');
+            window.document.getElementById('main').innerHTML= 'tab';
+
+        }else{
+            console.log('desktop');
+            window.document.getElementById('main').innerHTML= 'desktop';
+        }
+
+
+        }
+  
